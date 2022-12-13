@@ -18,6 +18,14 @@ Route::get('/', function () {
     return view('home');
 });
 
-Auth::routes();
+Route::get('/about', function () {
+    return view('about');
+});
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+//Auth::routes();
+//
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

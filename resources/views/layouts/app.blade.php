@@ -18,6 +18,11 @@
 </head>
 <body>
 @include('includes.header')
+
+@if (Request::is("/"))
+    @include('includes.hero')
+@endif
+
 <div class="container mt-5">
     <div class="row">
         <div class="col-8">
