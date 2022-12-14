@@ -9,7 +9,7 @@
         <h3>{{$item->subject}}</h3>
         <p><small>{{$item->created_at}}</small></p>
         <p>{{$item->email}}</p>
-        <a href="">
+        <a href="{{route('contact-data-one', $item->id)}}">
         <button class="btn btn-outline-secondary" >Детали</button>
         </a>
     </div>
