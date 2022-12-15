@@ -1,5 +1,5 @@
 <template>
-    <div class="w-96 mx-auto pt-8">
+    <MainLayout>
         <h1 class="text-lg mb-2">Create</h1>
         <div class="mb-8">
         <Link :href="route('post.index')" class="text-sm text-sky-500">Back</Link>
@@ -20,19 +20,22 @@
                 </button>
             </div>
         </form>
-    </div>
+    </MainLayout>
 </template>
 
 <script>
 import {Link} from "@inertiajs/inertia-vue3";
+import MainLayout from "@/Layouts/MainLayout.vue";
 
 export default {
     name: "index",
+    // layout: MainLayout,
     components: {
-        Link
+        Link,
+        MainLayout
     },
 
-    date() {
+    data() {
         return {
             title: "",
             content: ""
