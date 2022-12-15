@@ -1,6 +1,9 @@
 <template>
     <div class="w-96 mx-auto pt-8">
-        <h1 class="text-lg mb-8">Create</h1>
+        <h1 class="text-lg mb-2">Create</h1>
+        <div class="mb-8">
+        <Link :href="route('post.index')" class="text-sm text-sky-500">Back</Link>
+        </div>
         <form @submit.prevent="store">
             <div class="mb-4">
                 <input v-model="title" class="w-full rounded-full border-gray-300 align-middle" type="text"

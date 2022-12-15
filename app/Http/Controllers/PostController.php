@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
     public function index(){
-        return inertia('Post/index');
+        $posts = Post::all();
+        return inertia('Post/index',compact('posts'));
     }
     public function create(){
         return inertia('Post/create');
