@@ -31,13 +31,17 @@ class PostController extends Controller
     }
 
     public function edit(Post $post){
-//        dd( $post);
         return inertia('Post/Edit', compact('post'));
     }
 
     public function update(Post $post, UpdateRequest $request){
-//        dd($post);
         $post->update($request->validated());
+        return redirect()->route('post.index');
+    }
+
+    public function delete(Post $post){
+//        Post::destroy($post);
+        $post->delete();
         return redirect()->route('post.index');
     }
 }

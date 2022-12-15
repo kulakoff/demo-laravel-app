@@ -8,10 +8,12 @@
             <div class="mb-4">
                 <input v-model="title" class="w-full rounded-full border-gray-300 align-middle" type="text"
                        placeholder="Title">
+                <div v-if="errors.title" class="text-red-600 text-sm">{{errors.title}}</div>
             </div>
             <div class="mb-4">
                 <textarea v-model="content" class="w-full rounded-full border-gray-300"
                           placeholder="Content"></textarea>
+                <div v-if="errors.content" class="text-red-600 text-sm">{{errors.content}}</div>
             </div>
             <div>
                 <button
@@ -34,7 +36,7 @@ export default {
         Link,
         MainLayout
     },
-
+    props:['errors'],
     data() {
         return {
             title: "",
